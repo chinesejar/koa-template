@@ -8,7 +8,10 @@
   },
   "dependencies": {
     "@koa/router": "^10.0.0",
+    "ajv": "^7.0.0-beta.4",
+    "ajv-i18n": "^3.6.0",
     "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
     "mongoose": "^5.10.13"
   }
 }

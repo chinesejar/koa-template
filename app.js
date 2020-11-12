@@ -1,4 +1,5 @@
 const Koa = require('koa');
+const bodyParser = require('koa-bodyparser');
 const config = require('./config');
 const routes = require('./routes');
 const Database = require('./utils/db');
@@ -7,6 +8,7 @@ const { port } = config;
  * 实例化 Koa
  */
 const app = new Koa();
+app.use(bodyParser());
 
 /**
  * 注册数据库

@@ -1,12 +1,20 @@
-const mongoose = require('mongoose');
+const {Schema, model, Types} = require('mongoose');
 
-const GuideSchema = mongoose.Schema({
+const GuideSchema = new Schema({
   title: {
     type: String,
-    require: true
+    required: true
+  },
+  user: {
+    type: Types.ObjectId,
+    ref: 'User',
+    required: true,
   }
+}, {
+  collection: 'guide',
+  autoIndex: true
 });
 
-const GuideModel = mongoose.model('guide', GuideSchema);
+const GuideModel = model('Guide', GuideSchema);
 
 module.exports = GuideModel;

@@ -3,6 +3,8 @@
  * 基类
  */
 
+const { Types: {ObjectId} } = require("mongoose");
+
 class BaseDto {
 
   constructor(Model) {
@@ -18,11 +20,11 @@ class BaseDto {
   }
 
   async findById(_id) {
-    return await this.Model.findOne({ _id });
+    return await this.Model.findOne({ _id: ObjectId(_id) });
   }
 
   async create(data) {
-    return await this.Model.insert(data);
+    return await this.Model.create(data);
   }
 
   async deleteOne(where) {
