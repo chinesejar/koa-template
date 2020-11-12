@@ -1,0 +1,14 @@
+{
+  "name": "travel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@koa/router": "^10.0.0",
+    "koa": "^2.13.0",
+    "mongoose": "^5.10.13"
+  }
+}
